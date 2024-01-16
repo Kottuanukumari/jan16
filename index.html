@@ -1,0 +1,219 @@
+<html>
+    <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width device-width,intial-scale=0.1">
+    <link rel="stylesheet" href="style.css">
+    </head>
+     <body>
+         <div>
+         </div>
+    <p style="text-align:right;">(201-205)pages</p>
+    <P>&nbsp;&nbsp;&nbsp;&nbsp;systems focus on developing methodologies to categorize documents according to some
+human-specified category terms and hierarchy, rather than on generating category terms
+        and hierarchy automatically</P>
+
+        <P>&nbsp;&nbsp;&nbsp;&nbsp;In this work, we provide a method that can automatically generate category themes
+and establish the hierarchical structure among categories. Traditionally, category
+themes were selected according to the popularity of words in the majority of documents,
+which can be done by human engineering, statistical training, or a combination of the two.
+In this work, we reversed the text categorization process to obtain the category themes.
+First, we should cluster the documents. The document collection was trained by the selforganizing maps (SOM) (Kohonen, 1997) algorithm to generate two feature maps, namely
+the document cluster map (DCM) and the word cluster map (WCM). A neuron in these
+two maps represents a document cluster and a word cluster, respectively. Through the
+self-organizing process, the distribution of neurons in the maps reveals the similarities
+among clusters. We selected category themes according to such similarities. To generate
+the category themes, dominating neurons in the DCM were first found as centroids of
+some super-clusters that each represent a general category. The words associated with
+the corresponding neurons in WCM were then used to select category themes. Examining
+the correlations among neurons in the two maps may also reveal the structure of
+            categories</P>
+        <P>&nbsp;&nbsp;&nbsp;&nbsp;The corpus that was used to train the maps consists of documents that are written
+in Chinese. We decided to use a Chinese corpus for two reasons. First, over a quarter
+of the earth’s population use Chinese as their native language. However, experiments on
+techniques for mining Chinese documents were relatively less than those for documents
+written in other languages. Second, demands for Chinese-based, bilingual, or multilingual text-mining techniques arise rapidly nowadays. We feel that such demands could
+not be easily met if experiments were only conducted in English corpora. On the other
+hand, a difficult problem in developing Chinese-based text-mining techniques is that
+research on the lexical analysis of Chinese documents is still in its infancy. Therefore,
+methodologies developed for English documents play an inevitable role in developing
+a model for knowledge discovery in Chinese documents. In spite of the differences in
+grammar and syntax between Chinese and English, we can always separate the documents, whether written in English or Chinese, into a list of terms that may be words or
+phrases. Thus, methodologies developed based on word frequency count may provide
+an unified way in processing documents written in any language that can be separated
+into a list of terms. In this work, a traditional term-based representation scheme in
+information retrieval field is adopted for document encoding. The same method developed in our work can naturally extend to English or multi-lingual documents because
+            these documents can always be represented by a list of terms.</P>
+         <center>
+             <h1>RELATED WORK</h1>
+         </center>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;Text categorization or classification systems usually categorized documents according to some predefined category hierarchy. An example is the work by the CMU textlearning group (Grobelnik & Mladenic, 1998) that used the Yahoo! hierarchy to categorize
+documents. Most text categorization research focused on developing methods for</p>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;categorization. Examples are Bayesian independent classifier (Lewis, 1992), decision
+trees (Apte, Damerau, & Weiss, 1994), linear classifiers (Lewis,, Schapire, Callan, &
+Papka, 1996), context-sensitive learning (Cohen & Singer, 1996), learning by combining
+classifier (Larkey & Croft, 1996), and instance-based learning (Lam, Ruiz, & Srinivasan,
+1999). Another usage of category hierarchy is browsing and searching the retrieval
+results. An example is the Cat-a-Cone system developed by Hearst and Karadi (1997).
+Feldman, Dargan, and Hirsh (1998) combined keyword distribution and keyword hierarchy to perform a range of data-mining operations in documents. Approaches on
+automatically generating the category themes are similar in context with research on topic
+identification or theme generation of text documents. Salton and Singhal (1994) generated a text relationship map among text excerpts and recognized all groups of three
+mutually related text excerpts. A merging process is applied iteratively to these groups
+to finally obtain the theme (or a set of themes) of all text excerpts. Another approach by
+Salton (1971) and Salton and Lesk (1971) clusters the document set and constructs a
+thesaurus-like structure. For example, Salton and Lesk divide the whole dataset into
+clusters where no overlap is allowed and construct a dictionary. The approach is
+nonhierarchy in this sense. Clifton and Cooley (1999) used traditional data-mining
+techniques to identify topics in a text corpus. They used a hypergraph partitioning
+scheme to cluster frequent item sets. The topic is represented as a set of named entities
+of the corresponding cluster. Ponte and Croft (1997) applied dynamic programming
+techniques to segment text into relatively small segments. These segments can then be
+used for topic identification. Lin (1995) used a knowledge-based concept counting
+paradigm to identify topics through the WordNet hierarchy. Hearst and Plaunt (1993)
+argued that the advent of full-length documents should be accompanied by the need for
+subtopic identification. They developed techniques for detecting subtopics and performed experiments using sequences of locally concentrated discussions rather than
+full-length documents. All these works, to some extent, may identify topics of documents
+that can be used as category themes for text categorization. However, they either rely on
+predefined category hierarchy (e.g., Lin, 1995) or do not reveal the hierarchy at all.
+         </p>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp; Recently, researchers have proposed methods for automatically developing category hierarchy. McCallum and Nigam (1999) used a bootstrapping process to generate
+new terms from a set of human-provided keywords. Human intervention is still required
+in their work. Probabilistic methods were widely used in exploiting hierarchy. Weigend,
+Wiener, and Pedersen (1999) proposed a two-level architecture for text categorization.
+The first level of the architecture predicts the probabilities of the meta-topic groups,
+which are groups of topics. This allows the individual models for each topic on the second
+level to focus on finer discrimination within the group. They used a supervised neural
+network to learn the hierarchy where topic classes were provided and already assigned.
+A different probabilistic approach by Hofmann (1999) used an unsupervised learning
+architecture called Cluster-Abstraction Model to organize groups of documents in a
+hierarchy</p>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;Research on Chinese text processing focused on the tasks of retrieval and segmentation. Some work can be found in Chen, He, Xu, Gey, and Meggs (1997); Dai, Loh, and
+Khoo (1999); Huang & Robertson (1997a); Nie, Brisebois, and Ren (1996); Rajaraman, Lai,
+and Changwen (1997); and Wu and Tseng (1993, 1995). To our knowledge, there is still
+no work on knowledge discovery in Chinese text documents. The self-organizing maps
+model used in this work has been adopted by several other researchers for document</p>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;clustering (for example, Kaski, Honkela, Lagus & Kohonen, 1998; Rauber & Merkl, 1999;
+and Rizzo, Allegra, & Fulantelli, 1999). However, we found no work similar to our research.
+</p>
+         <center>
+         <h2>GENERATING CLUSTERS</h2>
+         </center>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;To obtain the category hierarchy, we first perform a clustering process on the
+corpus. We then apply a category hierarchy generation process to the clustering result
+and obtain the category hierarchy. This section describes the clustering process. We will
+start with the preprocessing steps, follow by the clustering process by the SOM learning
+algorithm. Two labeling processes are then applied to the trained result. After the labeling
+processes, we obtain two feature maps that characterize the relationship between
+documents and words, respectively. Two maps are obtained after the labeling processes.
+The category hierarchy generation process, which will be described in the next section,
+is then applied to these two maps to develop the category hierarchy.</p>
+         <h3>Preprocessing and Encoding Documents</h3>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;Our approach begins with a standard practice in information retrieval (Salton &
+McGill, 1983), i.e., the vector space model, to encode documents with vectors, in which
+each element of a document vector corresponds to a different indexed term. In this work
+the corpus contains a set of Chinese news documents from the Central News Agency
+(CNA). First, we extract index terms from the documents. Traditionally, there are two
+schemes for extracting terms from Chinese texts. One is a character-based scheme and
+the other is a word-based scheme (Huang & Robertson, 1997b). We adopted the second
+scheme because individual Chinese characters generally carry no context-specific
+meaning. Two or more Chinese characters compose a word in Chinese. After extracting
+words, they are used as index terms to encode the documents. We use a binary vector
+to represent a document. A value of 1 for an element in a vector indicates the presence
+of the corresponding word in the document; otherwise, a value of 0 indicates the absence
+of the word</p>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;A problem with this encoding method is that if the vocabulary is very large, the
+dimensionality of the vector is also high. In practice, the resulting dimensionality of the
+space is often tremendously huge, since the number of dimensions is determined by the
+number of distinct index terms in the corpus. In general, feature spaces on the order of
+1,000 to 100,000 are very common for even reasonably small collections of documents.
+As a result, techniques for controlling the dimensionality of the vector space are
+required. Such a problem could be solved, for example, by eliminating some of the most
+common and some of the most rare indexed terms in the preprocessing stage. Several
+other techniques may also be used to tackle the problem; e.g., multidimensional scaling
+(Cox & Cox, 1994), principal component analysis (Jolliffe, 1986), and latent semantic
+indexing (Deerwester, Dumais, Furnas, & Landauer, 1990).
+</p>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;In information retrieval, several techniques are widely used to reduce the number
+of index terms. Unfortunately, these techniques are not fully applicable to Chinese
+documents. For example, stemming is generally not necessary for Chinese texts. On the
+other hand, we can use stop words and a thesaurus to reduce the number of index terms.</p>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;In this work, we manually constructed a stop list to filter out the meaningless words in
+the texts. We did not use a thesaurus simply because it was not available. Actually, the
+self-organizing process will cluster similar words together (Lee & Yang, 1999) and
+automatically generate a thesaurus. We have initiated a project for this part of research.
+We believe that the dimensionality of the document vectors can be dramatically reduced
+if we successfully applied such a thesaurus.</p>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;A document in the corpus contains about 100-200 characters. We discarded overlengthy (more than 250 words) and duplicate documents for a better result. This step is
+not necessary because it affects less than 2% of documents in the corpus. Keeping these
+documents may only slightly increase the number of index terms and the processing time.
+However, if the corpus contains many duplicate or over-lengthy documents, the
+clustering result may be deteriorated.
+</p>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;We used the binary vector scheme to encode the documents and ignore any kind
+of term weighting schemes. We decided to use the binary vector scheme due to the
+following reasons. First, we clustered documents according to the co-occurrence of the
+words, which is irrelevant to the weights of the individual words. Second, our experiments
+showed no advantage in the clustering result to using term weighting schemes (classical
+tf and tf·idf schemes were used), but an additional amount of computation time was
+wasted on computing the weights. As a result, we believe the binary scheme is adequate
+to our needs.</p>
+         <h3>Generating the Word Cluster Map and Document
+Cluster Map</h3>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;The documents in the corpus were first encoded into a set of vectors by the terms
+that appeared in the documents, as in a vector space model. We intended to organize
+these documents into a set of clusters such that similar documents would fall into the
+same cluster. Moreover, similar clusters should be “close” in some regard. That is, we
+should be able to organize the clusters such that clusters that contain similar documents
+should be close in some measurement space. The unsupervised learning algorithm of
+SOM networks (Kohonen, 1997) meets our needs. The SOM algorithm organizes a set of
+high-dimensional vectors into a two-dimensional map of neurons according to the
+similarities among the vectors. Similar vectors, i.e., vectors with small distance, will map
+to the same or nearby neurons after the training (or learning) process. That is, the
+similarity between vectors in the original space is preserved in the mapped space.
+Applying the SOM algorithm to the document vectors, we actually perform a clustering
+process about the corpus. A neuron in the map can be considered as a cluster. Similar
+documents will fall into the same or neighboring neurons (clusters). In addition, the
+similarity of two clusters can be measured by the geometrical distance between their
+corresponding neurons. To decide the cluster to which a document or a word belongs,
+we apply a labeling process to the documents and the words respectively. After the
+labeling process, each document associates with a neuron in the map. We record such
+associations and form the document cluster map (DCM). In the same manner, we label
+each word to the map and form the word cluster map (WCM). We then use these two maps
+to generate the category themes and hierarchy</p>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;We define some denotations and describe the training process here. Let xi
+={xin|1≤n≤N},
+1≤i≤M, be the encoded vector of the ith document in the corpus, where N is the number of
+indexed terms and M is the number of the documents. We used these vectors as the training
+inputs to the SOM network. The network consists of a regular grid of neurons. Each neuron
+in the network has N synapses. Let wj
+={wjn|1≤n≤N}, 1≤j≤J, be the synaptic weight vector of
+the jth neuron in the network, where J is the number of neurons in the network. Figure 1 depicts
+the formation of the map. We trained the network by the SOM algorithm:</p>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;Step 1. Randomly select a training vector xi
+ from the corpus</p>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;Step 2. Find the neuron j with synaptic weights wj
+ that is closest to xi
+, i.e.,</p><center>
+         <img src="C:\Users\koppa\OneDrive\Pictures\Screenshot  task.png"></center>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;Step 3. For every neuron l in the neighborhood of neuron j, update its synaptic weights by</p>
+         <center>
+         <img src="C:\Users\koppa\OneDrive\Pictures\Screenshot task2.png">
+         </center>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;where α(t) is the training gain at time stamp t.
+</p>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;Step 4. Increase time stamp t. If t reaches the preset maximum training time T, halt the training
+process; otherwise decrease α(t) and the neighborhood size, go to Step 1.</p>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;The training process stops after time T is sufficiently large so that every vector may be
+selected as training input for certain times. The training gain and neighborhood size both
+decrease when t increases.</p>
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;After training, we perform a labeling process to establish the association between each
+document and one of the neurons. The labeling process is described as follows. Each
+document feature vector xi
+,1≤ i ≤ M is compared to every neuron in the map. We label the</p>
+         <center>
+         <img src="C:\Users\koppa\OneDrive\Pictures\Screenshot task3.png">
+         </center>
+    </body>
+</html>
+         
+         
